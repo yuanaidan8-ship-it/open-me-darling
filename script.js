@@ -13,10 +13,26 @@ const INTRO_LINES = [
 
 const MEMORIES = [
   { src: 'photo1.jpeg', caption: "Every story has a beginning, and you're my favorite chapter.", rotate: -4 },
-  { src: 'photo2.jpeg', caption: 'One smile from you can brighten my whole day.', rotate: 3 },
-  { src: 'photo3.jpeg', caption: 'Home has never been a place — it has always been you.', rotate: -3 },
-  { src: 'photo4.jpeg', caption: 'The best memories are the ones we create together.', rotate: 4 },
-  { src: 'photo5.jpeg', caption: 'My favorite future is the one that has you in it. ❤️', rotate: -2 },
+
+  { src: 'photo2.jpeg', caption: "One smile from you can brighten my whole day.", rotate: 3 },
+
+  { src: 'photo3.jpeg', caption: "Home has never been a place — it has always been you.", rotate: -3 },
+
+  { src: 'photo4.jpeg', caption: "The best memories are the ones we create together.", rotate: 4 },
+
+  { src: 'photo5.jpeg', caption: "My favorite future is the one that has you in it. ❤️", rotate: -2 },
+
+  { src: 'photo6.jpeg', caption: "Every moment with you is a memory I'll always treasure.", rotate: 2 },
+
+  { src: 'photo7.jpeg', caption: "You make even the ordinary days feel magical.", rotate: -5 },
+
+  { src: 'photo8.jpeg', caption: "Every picture tells a story, and ours is my favorite.", rotate: 4 },
+
+  { src: 'photo9.jpeg', caption: "No matter where life takes us, I'll always choose you.", rotate: -3 },
+
+  { src: 'photo10.jpeg', caption: "This is only the beginning of our forever. ❤️", rotate: 3 },
+
+  { src: 'photo11.jpeg', caption: "Thank you for every beautiful memory we've made together. ❤️", rotate: -4 },
 ];
 
 const BIRTHDAY_LINES = [
