@@ -743,3 +743,32 @@ body {
     right:-120px;
     pointer-events:none;
 }
+
+/* ================= VIDEO PAGE ================= */
+
+.video-bg{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,#ffe4ee,#ffd6e7,#fff0f6);
+    z-index:-2;
+}
+
+.video-card{
+    width:min(92%,500px);
+    margin:auto;
+    text-align:center;
+}
+
+.our-video{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    margin:20px 0;
+    box-shadow:0 15px 35px rgba(255,105,180,.25);
+}
+
+.video-caption{
+    color:#8b5d70;
+    font-size:1rem;
+    margin-bottom:20px;
+}

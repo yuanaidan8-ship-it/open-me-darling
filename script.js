@@ -249,6 +249,44 @@ function initMemoriesPage(onNext) {
 }
 
 /* ================================================
+   VIDEO PAGE
+   ================================================ */
+
+function initVideoPage(onNext) {
+
+  const video = $('our-video');
+  const nextBtn = $('video-next');
+  const music = $('bg-audio');
+
+  // Hide the Continue button at first
+  nextBtn.style.display = 'none';
+
+  // Pause the background music
+  if (music) music.pause();
+
+  // Start the video
+  video.currentTime = 0;
+  video.play().catch(() => {});
+
+  // When the video finishes
+  video.onended = () => {
+
+    nextBtn.style.display = 'inline-flex';
+
+  };
+
+  // Continue button
+  nextBtn.onclick = () => {
+
+    if (music) music.play().catch(() => {});
+
+    onNext();
+
+  };
+
+}
+
+/* ================================================
    LETTER PAGE
    ================================================ */
 
@@ -375,21 +413,30 @@ function initGiftPage() {
 document.addEventListener('DOMContentLoaded', () => {
   initPasswordPage(() => {
     showPage('page-intro');
+
     initIntroPage(() => {
       showPage('page-music');
+
       initMusicPage(() => {
         showPage('page-memories');
+
         initMemoriesPage(() => {
-          showPage('page-letter');
-          initLetterPage(() => {
-            showPage('page-birthday');
-            initBirthdayPage(() => {
-              showPage('page-gift');
-              initGiftPage();
+          showPage('page-video');
+
+          initVideoPage(() => {
+            showPage('page-letter');
+
+            initLetterPage(() => {
+              showPage('page-birthday');
+
+              initBirthdayPage(() => {
+                showPage('page-gift');
+                initGiftPage();
+              });
             });
-          });
-        });
-      });
-    });
-  });
+          }); // <-- closes initVideoPage
+        }); // <-- closes initMemoriesPage
+      }); // <-- closes initMusicPage
+    }); // <-- closes initIntroPage
+  }); // <-- closes initPasswordPage
 });
